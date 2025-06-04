@@ -5,150 +5,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>movies_website</title>
   <style>
-    /* Reset default margin and padding */
+   /* Reset default margin/padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    line-height: 1.6;
+    padding: 0 15px;
 }
 
-/* Header styling */
+/* Header */
 header {
-    background-color: #111;
-    color: #fff;
+    background: #000000cc;
     padding: 20px;
     text-align: center;
-    position: relative;
+    border-bottom: 3px solid #00ffff;
 }
 
 header h1 {
-    margin-bottom: 10px;
     font-size: 2.5em;
-    color: #ff4c4c;
+    color: #00ffff;
+    margin-bottom: 15px;
 }
 
 header input[type="text"] {
     padding: 10px;
-    width: 50%;
+    width: 60%;
     max-width: 400px;
-    border-radius: 5px;
+    border-radius: 30px;
     border: none;
-    outline: none;
-    margin-top: 10px;
     font-size: 1em;
+    margin-bottom: 20px;
 }
 
-/* Header navigation */
 header ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
     gap: 20px;
-    margin-top: 15px;
-}
-
-header ul li {
-    font-size: 1.1em;
 }
 
 header ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    padding: 10px 15px;
+    background: #ff00cc;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
 header ul li a:hover {
-    color: #ff4c4c;
+    background: #ff66cc;
 }
 
-/* Main content styling */
-main {
+/* GENRE section */
+main > div:nth-child(2) {
+    text-align: center;
+    background: #262626;
     padding: 30px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-main hr {
-    margin: 30px 0;
-    border: 1px solid #ccc;
-}
-
-/* Genre section */
-main h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #222;
-}
-
-main ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-main ul li {
-    margin: 8px 0;
-    font-size: 1.1em;
-}
-
-main ul li a {
-    text-decoration: none;
-    color: #0077cc;
-}
-
-main ul li a:hover {
-    text-decoration: underline;
-    color: #ff4c4c;
-}
-
-/* Movie download section */
-main h3 {
-    margin: 10px 0;
-    font-weight: normal;
-    color: #555;
-}
-
-main p {
-    font-size: 1em;
-    color: #666;
-    margin-top: 5px;
-}
-
-/* Latest movies */
-main h1 {
+main > div:nth-child(2) h2 {
+    color: #00ffcc;
+    margin-bottom: 20px;
     font-size: 2em;
-    margin-bottom: 15px;
-    color: #000;
 }
 
-main ul span {
+main > div:nth-child(2) ul {
+    list-style: none;
+    padding: 0;
+}
+
+main > div:nth-child(2) ul li {
     display: inline-block;
     margin: 10px;
 }
 
-main ul span img {
-    width: 180px;
+main > div:nth-child(2) ul li a {
+    text-decoration: none;
+    background: #ff0066;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+main > div:nth-child(2) ul li a:hover {
+    background: #ff3399;
+}
+
+/* Download Section */
+.download-section {
+    text-align: center;
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    padding: 30px 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.download-section h2 {
+    font-size: 2em;
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.download-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #f4f4f4;
+}
+
+.download-section p {
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+
+/* Latest Movies Section */
+main > div:last-of-type {
+    padding: 30px 0;
+    text-align: center;
+}
+
+main > div:last-of-type h1 {
+    font-size: 2.2em;
+    color: #00ffff;
+    margin-bottom: 30px;
+}
+
+main > div:last-of-type ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+main > div:last-of-type ul li {
+    border: 2px solid #ffffff33;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #ffffff0d;
+    transition: transform 0.3s;
+}
+
+main > div:last-of-type ul li:hover {
+    transform: scale(1.05);
+    background-color: #ffffff1a;
+}
+
+main > div:last-of-type ul li img {
+    width: 200px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-main ul span img:hover {
-    transform: scale(1.05);
-}
-
-/* Footer styling */
+/* Footer */
 footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
     margin-top: 40px;
+    padding: 20px;
+    background: #111;
+    text-align: center;
+    color: #ccc;
+    border-top: 2px solid #00ffff;
 }
 
 
